@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="row  div1">
+        <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-9 col-xs-offset-2" id="form">
+
+
+            <center>
+                <b class="signup">Sign Up</b>
+            </center>
+            <form name="formRegister">
+                <div class="form-group">
+                    <label>User Name :</label>
+                    <input type="text" name="username" id="upUserName" class="form-control text" placeholder="Enter Name" ng-model="username" ng-required="true" ng-pattern="usernamep">
+                    <span ng-show="formRegister.username.$error.required"></span>
+                    <span ng-show="formRegister.username.$error.pattern">Enter only characters</span>
+                </div>
+                <div class="form-group">
+                    <label>Email :</label>
+                    <input type="email" id="upEmail" name="email" class="form-control text" placeholder="Enter Email" ng-model="email" ng-required="true">
+                    <span ng-show="formRegister.email.$error.required"></span>
+                    <span ng-show="formRegister.email.$error.email">Enter a valid email</span>
+                </div>
+                <div class="form-group">
+                    <label>Password :</label>
+                    <input type="password" id="upPassword" name="password" class="form-control text" placeholder="Enter Password" ng-model="password"
+                        ng-required="true" ng-minlength="8">
+                    <span ng-show="formRegister.password.$error.required"></span>
+                    <span ng-show="formRegister.password.$error.minlength">Enter password greater than 8 </span>
+                </div>
+                <div class="form-group">
+                    <label>Mobile No :</label>
+                    <input type="text" id="upMobile" name="phone" class="form-control text" placeholder="Enter Mobile Number" ng-minlength="11"
+                        ng-maxlength="11" ng-model="phone" ng-required="true" ng-pattern="mobnumPattern">
+                    <span ng-show="formRegister.phone.$error.required"></span>
+                    <span ng-show="formRegister.phone.$error.minlength">Enter 11 numbers </span>
+                    <span ng-show="formRegister.phone.$error.maxlength">Enter 11 numbers</span>
+                    <span ng-show=" formRegister.phone.$error.pattern">Enter only numbers </span>
+
+                </div>
+                <div class="form-group">
+                    <label>Date Of Birth :</label>
+                    <input type="date" name="dob" id="upDOB" class="form-control text"  required>
+                </div>
+                <div class="form-group">
+                    <label>Gender :</label>
+                    <select class="form-control text" id="upGender" required>
+                        <option value="Male" required>Male</option>
+                        <option value="Female" required>Female</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label>Blood Group :</label>
+                    <select class="form-control text" id="upBloodType" required>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB-</option>
+                        <option>AB+</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <div class="part1">
+                        <label>Address :
+                            <div class="part2" id="imgLoc">
+                                <img src="assets/img/67-512.png" class="rounded float-left" alt="..." width="50" height="50" class="form-control"
+                                    align="left">
+                            </div>
+                        </label>
+
+                        <small>is not your location ?? write your location here </small>
+
+                        <input id="upAddress" type="text" class="form-control text">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <button id="signUpBtn" style="width:100%">Sign up</button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>

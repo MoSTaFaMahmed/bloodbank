@@ -1,0 +1,162 @@
+<!doctype html>
+<html  ng-app="myapp" lang="eg">
+    <head>
+        <script src="assets/js/jquery.js"></script>
+  
+       <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="assets/js/angular.1.6.min.js"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />       
+        <link href="assets/css/request.css" rel="stylesheet" />
+        
+         <!-- FONT AWESOME CSS -->
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- FLEXSLIDER CSS -->
+        <link href="assets/css/flexslider.css" rel="stylesheet" />
+        <!-- Google	Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+
+        
+        <title>Request Blood</title>
+    </head>
+
+    <body ng-controller="accountcontroller">
+
+
+    <div class="navbar navbar-inverse " id="menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+    
+                    <a class="navbar-brand" href="../../HomePage.html">
+                        <img class="logo-custom" src="assets/img/img1.png" alt="Blood Drop Logo" />
+                    </a>
+                    <h1>Blood Bank</h1>
+                </div>
+                <div class="navbar-collapse collapse move-me">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="../../HomePage.html">HOME</a>
+                        </li>
+                        <li>
+                            <a id ="reqToProLink" href="../SignInForm/SignInForm.html">Sign in</a>
+                        </li>
+                        
+                        
+    
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+        <!--NAVBAR SECTION END-->
+    
+    <div style="color: rgb(123, 123, 123, 0.5)">
+        <div class=" container mainDiv">
+            <div class="signinbox ">
+                <img src="image/img1.png" class="bloodicon" />
+                <h1>REQUEST BLOOD</h1>
+                <form name="formRegister" class="form-horizontal">
+                    <div class="form-group">
+                        <div>
+                            <label for="InputUsername">NAME:</label>
+
+                            <input type="text" name="username" id="user" ng-model="fname" id="InputUsername" placeholder="Enter yourname" ng-model="username"
+                                ng-minlength="3" ng-maxlength="10" ng-required="true"/>
+                        </div>
+                        <small ng-show="formRegister.username.$error.minlength">please enter at least 3 character</small>
+                        <small ng-show="formRegister.username.$error.maxlength">please enter no more than 10 character</small>
+                        <small ng-show="formRegister.username.$error.required"></small>
+                        <small ng-show="formRegister.username.$error.pattern">enter only character</small>
+                    </div>
+
+                    <div class="form-group ">
+                        <label for="InputPhone"> PHONE:</label>
+                        <input type="tel" id="mobile" ng-required="true" name="phone" ng-model="phone" id="InputPhone" placeholder="Enter Phone " custom validation
+                            minlength="11" maxlength="11" />
+                    </div>
+                    <small ng-show="formRegister.phone.$error.required"></small>
+                    <small ng-show="formRegister.phone.$error.minlength">please enter 10 numbers </small>
+                    <small ng-show="formRegister.phone.$error.maxlength">please enter 10 numbers</small>
+                    <small ng-show=" formRegister.phone.$error.pattern">enter only numbers </small>
+
+                    <div class="form-group">
+                        <label for="InputNumberOfBag">COUNT:</label>
+                        <input type="number" ng-required="true" id="InputNumberOfBag" placeholder="Number Of Blood Bags" min="0" max="5" />
+                    </div>
+
+                    <div class="form-group">
+                        <div class="part1">
+                            <label for="InputUsername">ADDRESS:</label>
+                            <div class="part2" id="reqImgLoc">
+
+                                <img src="67-512.png" class="rounded float-left" alt="..." width="50" height="50" class="form-control"
+                                    align="right">
+                            </div>
+                            <small style="color: rgb(123, 123, 123)">is not your location ?? write your location here </small>
+                            <input type="text" id="demo" ng-required="true" />
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="selectDiv">
+                            <label for="InputUsername">BLOOD TYPE:</label>
+                            <select id="kind" placeholder="kind" required>
+                                <option>AB+</option>
+                                <option>A+</option>
+                                <option>B+</option>
+                                <option>O+</option>
+                                <option>AB-</option>
+                                <option>A-</option>
+                                <option>B-</option>
+                                <option>O-</option>
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+
+
+
+
+                    <input type="submit" id="sendReqBtn" value="send" onclick="submit1()" />
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        &copy 2018 BloodBank.com | All Rights Reserved | <a href="../contuctform/contuctForm.html">Contact Us</a>
+    </div>
+    <!-- FOOTER SECTION END-->
+         <script src="requestmapp.js"></script>
+
+         <script src="contuct.js"></script>
+
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts -->
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts -->
+    <script src="assets/js/custom.js"></script>
+    </body>
+
+</html>

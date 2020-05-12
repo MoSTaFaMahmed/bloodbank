@@ -1,0 +1,115 @@
+body
+{
+    margin: 0;
+    padding: 0; 
+    font-family: sans-serif;
+   background-image: url("img/BloodDonation.jpg");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+.signinbox
+{
+    background: rgb(240, 232, 232);
+    color:#000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing:border-box;
+    padding: 10px 100px;
+    border-radius: 10px;
+   
+   
+
+}
+
+.bloodicon
+{
+    margin-top: -8%;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(70% - 10px);
+}
+
+h1 {
+    margin: 0px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.signinbox label
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.signinbox input
+{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.signinbox input[type="text"],  input[type="password"],input[type="email"]
+{
+    border: none;
+    border-bottom: 1px solid #fb2525;
+    background: transparent;
+    outline:none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+
+.signinbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height:40px;
+    background: #fb2525;
+    color: #000;
+    font-size: 18px;
+    border-radius: 20px;
+
+
+}
+
+
+    
+
+
+.signinbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #FF3333;
+    color:rgb(240, 232, 232);
+}
+
+
+.signinbox a
+{
+    text-decoration: none;
+    font-size: 12px;
+    line-height:20px;
+    color:rgb(131, 130, 130);
+}
+
+.signinbox a:hover 
+{
+    color: #FF3333;
+}
+small
+{
+    color:brown;
+    margin: 0;
+    padding: 0;
+}
+#massag , #InputEmail
+{
+    background-color:rgb(240, 232, 232);
+}

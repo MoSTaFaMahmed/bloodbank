@@ -1,0 +1,140 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--Angular Framework-->
+    <script src="assets/js/angular.1.6.min.js"></script>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- FLEXSLIDER CSS -->
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- Google	Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+
+    <title>Contact US</title>
+
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="accountcontroller">
+
+    <div class="navbar navbar-inverse " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="../../HomePage.html">
+                    <img class="logo-custom" src="assets/img/img1.png" alt="Blood Drop Logo" />
+                </a>
+                <h1>Blood Bank</h1>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../HomePage.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="../request/request.html">Request</a>
+                    </li>
+                    
+                    
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--NAVBAR SECTION END-->
+    <div class="mainDiv container">
+        <div class="signinbox ">
+            <img src="img/img1.png" class="bloodicon" />
+            <h1>Contact Us</h1>
+            <form name="formRegister" action="#">
+                <div class="form-group">
+                    <div>
+                        <label for="InputUsername">Name</label>
+                        <input type="text" name="fname" id="InputUsername" placeholder="Enter Name" ng-model="fname" ng-minlength="3" ng-maxlength="10"
+                        />
+                    </div>
+
+                    <small ng-show="formRegister.fname.$error.minlength">enter at least 3 character</small>
+                    <small ng-show="formRegister.fname.$error.required"></small>
+                    <small ng-show="formRegister.fname.$error.pattern">enter only character</small>
+
+                </div>
+
+
+                <div class="form-group">
+                    <div>
+                        <label for="InputPhone">Phone</label>
+                        <input type="text" name="phone" id="InputPhone" placeholder="Enter Phone number" ng-minlength="10" ng-maxlength="10" ng-model="phone"
+                            ng-pattern="mobnumPattern" />
+                    </div>
+                    <small ng-show="formRegister.phone.$error.required"></small>
+                    <small ng-show=" formRegister.phone.$error.pattern">enter only numbers </small>
+                    <small ng-show="formRegister.phone.$error.maxlength">please enter password less than or equal 15 </small>
+                </div>
+
+
+                <div class="form-group">
+                    <div>
+                        <label for="InputEmail">Email</label>
+                        <input type="email" name="email" id="InputEmail" placeholder="Enter Email" ng-model="email" />
+                    </div>
+                    <small ng-show="formRegister.email.$error.required"></small>
+                    <small ng-show="formRegister.email.$error.email">please enter a valid email</small>
+
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <label for="InputMassage">Massage</label>
+                    <textarea id="massag" class="form-control" placeholder="Massage Us" aria-label="message" aria-describedby="sizing-addon5"
+                        rows="3" required>
+                       </textarea>
+                </div>
+
+                <input type="submit" name="" value="Send" />
+
+            </form>
+
+        </div>
+    </div>
+   
+   
+    <div id="footer">
+        &copy 2018 BloodBank.com | All Rights Reserved | <a href="#contact-sec">Contact Us</a>
+    </div>
+    <!-- FOOTER SECTION END-->
+   
+    <script src="contuct.js"></script>
+
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts -->
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

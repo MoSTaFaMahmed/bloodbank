@@ -1,0 +1,98 @@
+#form 
+{
+    background: rgb(240, 232, 232);
+    min-height: 700px;
+    padding: 5px 40px 40px 40px;
+    margin-top:50px;    
+    margin-bottom: 50px;
+    border-radius: 15px;
+    padding-top: 50px;
+    
+}
+
+
+.signup
+{
+    font-size: 50px;
+    font-family: initial;
+    font-weight: 700;
+
+}
+.text
+{
+    height: 43px;
+}
+label
+{
+    font-size: 20px;
+}
+
+.btn-primary
+{
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    width:100%;
+    color: #000;
+    font-size: 25px;
+    background-color: #fb2525;
+}
+.row input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ff0e0e;
+    color:rgb(240, 232, 232);
+}
+.row input[type="text"], input[type="password"], input[type="email"], input[type="date"]
+{
+    border: none;
+    border-bottom: 1px solid #fb2525;
+    background: transparent;
+    outline:none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+
+
+.row select{
+    background: rgb(240, 232, 232);
+    border:none;
+    border-bottom: 1px solid #fb2525;
+    outline:none;
+    
+    font-size: 18px;
+}
+.row option
+{
+    background-color: #000;
+    color:#fb2525;
+}
+.row textarea
+{
+    background: rgb(240, 232, 232);
+    border: 1px solid #fb2525;
+    outline:none;
+    font-size: 16px;
+
+}
+
+.part1{
+    display:inline-block;
+
+}
+.part2{
+    display: inline-block;
+    float: right;
+    position: relative;
+    margin-top: -10px;
+ 
+}
+.part2 img{
+    border-radius: 50%;
+}
+span{
+    color: #fb2525;
+    font-size: 18px;
+}

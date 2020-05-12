@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Online Blood Bank that facilitate the proccess of blood donation" />
+
+    <title>Blood Bank</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- FLEXSLIDER CSS -->
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- Google	Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+
+    <!--Angular Framework-->
+    <script src="assets/js/angular.1.6.min.js"></script>
+
+    <!--App Module-->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/homeToPro.js"></script>
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="Articles/css/article1.css" rel="stylesheet" />
+    <!--<link href="Articles/css/article2.css" rel="stylesheet" />-->
+
+    <!--JS Code-->
+    <script src="Articles/js/article1.js"></script>
+    <!--<script src="Articles/js/article2.js"></script>-->
+</head>
+
+<body ng-app="BloodBankMod" ng-controller="homeCtrl">
+
+    <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">
+                    <img class="logo-custom" src="assets/img/BloodLogo.png" alt="Blood Drop Logo" />
+                </a>
+                <h1>Blood Bank</h1>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="views/request/request.html">Request</a>
+                    </li>
+                    <li>
+                        <a id = "homeSigninLink" href="views/SignInForm/SignInForm.html">Sign in</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--NAVBAR SECTION END-->
+
+    <div class="home-sec" id="home">
+
+        <div class="overlay">
+
+            <div class="container">
+
+                <div class="row text-center ">
+
+                    <div class="col-lg-12  col-md-12 col-sm-12">
+
+                        <div class="flexslider set-flexi" id="main-section">
+
+                            <ul class="slides move-me">
+
+                                <!-- Slider 01 -->
+                                <li>
+                                    <h3>The blood you donates</h3>
+
+                                    <h1>Gives someone another chance of life..</h1>
+
+                                </li>
+                                <!-- End Slider 01 -->
+
+                                <!-- Slider 02 -->
+                                <li>
+                                    <h3>Donate Now</h3>
+
+                                    <h1>Save people lives</h1>
+
+                                    <a href="views/SignInForm/SignInForm.html" class="btn btn-lg" id="donateBtn">
+                                        Donate Now
+                                    </a>
+
+                                </li>
+                                <!-- End Slider 02 -->
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--HOME SECTION END-->
+
+    <div id="about-sec" class="container set-pad">
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">About Us</h1>
+                <p data-scroll-reveal="enter from the bottom after 0.3s">
+                    We are a non-profit organization that aims to facilitate the blood donation process and decrease the number of deaths in
+                    Egypt that is caused by the lack of blood bags and the long duration between requesting the blood bag
+                    and getting it.
+                </p>
+            </div>
+
+        </div>
+        <!--/.HEADER LINE END-->
+
+
+    </div>
+    <!-- ABOUT SECTION END-->
+
+    <div id="articleWrapper">
+        <div id="article-sec">
+            <div class="container set-pad">
+                <div class="row text-center">
+
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                        <h1 data-scroll-reveal="enter from the top after 0.1s" class="header-line">ARTICLES </h1>
+                    </div>
+
+                </div>
+                <!--/.HEADER LINE END-->
+
+                <div class="row">
+
+                    <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                        <div class="article-div" ng-click="showArticle1=!showArticle1">
+                            <img src="assets/img/BloodArt.jpg" class="img-rounded" />
+                            <h3>Before, During, After Donating Blood.</h3>
+                            <hr />
+                            <p>
+                                Tips for the day of your donation and how to donate your blood.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the top after 0.5s">
+                        <div class="article-div" ng-click="showArticle2=!showArticle2">
+                            <img src="assets/img/index.png" class="img-rounded" />
+                            <h3>WHY should I DONATE BLOOD?</h3>
+                            <hr />
+                            <p>
+                                A decision to donate your blood can save a life, or even several lives.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                        <div class="article-div" ng-click="showArticle3=!showArticle3">
+                            <img src="assets/img/BloodArt2.jpg" class="img-rounded" />
+                            <h3>Who can give blood? Who can't?</h3>
+                            <hr />
+                            <p>
+                                Learn more about eligibility to donate blood.
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- ARTICLE SECTION END-->
+
+        <div class="containerDiv" ng-show="showArticle1" ng-click="showArticle1 =!showArticle1">
+            <!--containerDiv1-->
+            <div class="articleContainerDiv">
+                <!--HeaderDiv-->
+                <div class="headerDiv">
+                    <!--imgDiv-->
+                    <div class="imgDiv">
+                        <img class="img-thumbnail" src="Articles/img/BloodArt.jpg">
+                    </div>
+                    <h1>Before, During, After Donating Blood. </h1>
+
+
+                    <hr/>
+                </div>
+
+                <!--articleDiv-->
+                <div class="content">
+                        <h2>Before Your Donation</h2>
+                        <ul>
+                            <li>In the days before your donation, eat healthy, iron-rich foods such as spinach, red meat, fish, poultry,
+                                beans, iron-fortified cereals and raisins. This will help maintain a healthy iron level. The number
+                                one reason for deferrals (especially women) is anemia </li>
+                            <li>Get a good night’s sleep</li>
+                            <li>At least 3 hours before donating, eat a balanced meal and avoid fatty foods, such as hamburgers, fries,
+                                or ice cream</li>
+                            <li>Drink an extra 16 oz. of water and fluids before the donation; you can be deferred for dehydration</li>
+                            <li>Remember that your system must be free of aspirin for three days (72 hours) or ibuprofen for 24 hours
+                                prior to donation</li>
+                            <li>Remember to bring a valid photo ID, a list of medications you are taking, and a list of places you have
+                                visited outside of the U.S. in the past 3 years</li>
+                        </ul>
+        
+                        <h2>During Your Donation</h2>
+                        <ul>
+                            <li>Wear clothing with short sleeves or sleeves that can be raised above the elbow</li>
+                            <li>If you have a preference of arm or vein that you like the phlebotomist to use for your donation, let
+                                them know</li>
+                            <li>Relax, listen to music, talk to others, or simply just catch up on some reading on our comfortable donor
+                                lounge chairs designed specifically for apheresis donations, which are equipped for our donors to
+                                surf the internet or watch movies</li>
+                            <li>Enjoy an assortment of refreshments in our canteen area immediately after donating</li>
+                        </ul>
+                        
+        
+        
+                        <h2>After Your Donation</h2>
+                        <ul>
+        
+                            <li>Drink plenty of fluids over the next 24-48 hours to replenish any fluids you lost during donation</li>
+                            <li>Avoid strenuous physical activity or heavy lifting for about 24 hours after donation</li>
+                            <li>If you feel light headed, lie down, preferably with feet elevated, until the feeling passes</li>
+                            <li>If something doesn’t feel right, call the Donor Center’s toll-free number provided to you after your
+                                donation
+                            </li>
+                            <li>Enjoy your day and know that you have made a positive difference!</li>
+        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ARTICLE1 PANE END-->
+
+        <div class="containerDiv" ng-show="showArticle2" ng-click="showArticle2 =!showArticle2">
+            <!--containerDiv1-->
+            <div class="articleContainerDiv">
+                <!--HeaderDiv-->
+                <div class="headerDiv">
+                    <!--imgDiv-->
+                    <div class="imgDiv">
+                        <img class="img-thumbnail" src="Articles/img/index_opt.png">
+                    </div>
+                    <h1>WHY should I DONATE BLOOD? </h1>
+
+
+                    <hr/>
+                </div>
+
+                <!--articleDiv-->
+                <div class="content">
+                    <p>It is also needed for regular transfusions for people with conditions such as thalassaemia and sickle
+                        cell disease and is used to make products such as clotting factors for people with haemophilia. There
+                        is a constant need for regular blood supply because blood can be stored for only a limited time before
+                        use. Regular blood donations by a sufficient number of healthy people are needed to ensure that safe
+                        blood will be available whenever and wherever it is needed. Blood is the most precious gift that
+                        anyone can give to another person — the gift of life. A decision to donate your blood can save a
+                        life, or even several if your blood is separated into its components — red cells, platelets and plasma
+                        — which can be used individually for patients with specific conditions.</p>
+                </div>
+            </div>
+        </div>
+        <!-- ARTICLE2 PANE END-->
+
+        
+        <div class="containerDiv" ng-show="showArticle3" ng-click="showArticle3 =!showArticle3">
+            <!--containerDiv1-->
+            <div class="articleContainerDiv">
+                <!--HeaderDiv-->
+                <div class="headerDiv">
+                    <!--imgDiv-->
+                    <div class="imgDiv">
+                        <img class="img-thumbnail" src="Articles/img/BloodArt2.jpg">
+                    </div>
+                    <h1>Who can give blood? Who can't? </h1>
+        
+        
+                    <hr/>
+                </div>
+        
+                <!--articleDiv-->
+                <div class="content">
+                        <p>Most people can give blood if they are in good health. There are some basic requirements one need to fulfill in order to
+                            become a blood donor. Below are some basic eligibility guidelines:</p>
+                        <hr/>
+                        <h2>Age</h2>
+                        <p>You are aged between 18 and 65.</p>
+                        <p>n some countries national legislation permits 16–17 year-olds to donate provided that they fulfil the physical and hematological
+                            criteria required and that appropriate consent is obtained.</p>
+                        <p>In some countries, regular donors over the age of 65 may be accepted at the discretion of the responsible physician. The
+                            upper age limit in some countries are 60. </p>
+                        
+                        
+                        <hr/>
+                        <h2>Weight:</h2>
+                        <p>You weigh at least 50 kg.</p>
+                        <p>In some countries, donors of whole blood donations should weigh at least 45 kg to donate 350 ml ± 10% . </p>
+                        
+                        <hr/>
+                        <h2>Health:</h2>
+                        <p>You must be in good health at the time you donate. You cannot donate if you have a cold, flu, sore throat, cold sore, stomach
+                            bug or any other infection. If you have recently had a tattoo or body piercing you cannot donate for 6 months from the
+                            date of the procedure. If the body piercing was performed by a registered health professional and any inflammation has
+                            settled completely, you can donate blood after 12 hours. If you have visited the dentist for a minor procedure you must
+                            wait 24 hours before donating; for major work wait a month. You must not donate blood If you do not meet the minimum
+                            haemoglobin level for blood donation</p>
+                        
+                        <hr/>
+                        <h2>Travel:</h2>
+                        <p>Travel to areas where mosquito-borne infections are endemic, e.g. malaria, dengue and Zika virus infections, may result in
+                            a temporary deferral . Many countries also implemented the policy to defer blood donors with a history of travel or residence
+                            for defined cumulative exposure periods in specified countries or areas, as a measure to reduce the risk of transmitting
+                            variant Creutzfeldt-Jakob Disease (vCJD) by blood transfusion.</p>
+                        
+                        
+                        <hr/>
+                        <h2>Behaviours:</h2>
+                        <P>You must not give blood: If you engaged in “at risk” sexual activity in the past 12 months Individuals with behaviours below
+                            will be deferred permanently: Have ever had a positive test for HIV (AIDS virus) Have ever injected recreational drugs.
+                            * In the national blood donor selection guidelines, there are more behavior eligibility criteria. Criteria could be different
+                            in different countries.</P>
+        
+                </div>
+            </div>
+        </div>
+        <!-- ARTICLE2 PANE END-->
+
+
+    </div>
+
+
+    <div id="progress-sec" class="container set-pad">
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <h1 data-scroll-reveal="enter from the top after 0.1s" class="header-line">OUR PROGRESS </h1>
+            </div>
+
+        </div>
+        <!--/.HEADER LINE END-->
+
+        <div class="row set-row-pad">
+            <div class="col-lg-6 col-md-6 col-sm-6 " data-scroll-reveal="enter from the left after 0.4s">
+                <img src="assets/img/AllDonate.jpg" class="img-thumbnail" />
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default" data-scroll-reveal="enter from the right after 0.5s">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                    <strong> 450+</strong> DONATION PROCESS
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapse1" class="panel-collapse collapse" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>More than 450 successful donation processes done in our blood banks and hospitals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default" data-scroll-reveal="enter from the right after 0.7s">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                    <strong> 300+</strong> SAVED LIVES
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>
+                                    More than 300 patients have received blood from our donors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default" data-scroll-reveal="enter from the right after 0.9s">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+                                    <strong> 253+</strong> CHECK UP DONE FOR DONORS
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapse3" class="panel-collapse collapse" style="height: 0px;">
+                            <div class="panel-body">
+                                <p>
+                                    More than 250 health checkups done for our donors to reassure on their health.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert " data-scroll-reveal="enter from the right after 1.1s" style="background-color: #d80a0a; color:#000;">
+                    <span style="font-size:40px;">
+                        <strong> 500+ </strong>
+                        <hr style="background-color: #fff;" /> Visits
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- PROGRESS SECTION END-->
+
+    <div id="footer">
+        &copy 2018 BloodBank.com | All Rights Reserved | <a href="views/contuctform/contuctForm.html">Contact Us</a>
+    </div>
+    <!-- FOOTER SECTION END-->
+
+
+
+    <!--  Jquery Core Script -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Flexslider Scripts -->
+    <script src="assets/js/jquery.flexslider.js"></script>
+    <!--  Scrolling Reveal Script -->
+    <script src="assets/js/scrollReveal.js"></script>
+    <!--  Scroll Scripts -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  Custom Scripts -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
